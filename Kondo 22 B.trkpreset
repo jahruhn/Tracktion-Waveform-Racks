@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PRESET name="Kondo 22 B" tags="Rack" description="A gc2020 clone; gives a warm natural sound"
+        path="/home/jeroen/.config/Tracktion/Waveform/Presets" filename="Kondo 22 B.trkpreset">
+  <RACK id="1106" name="Kondo 22 B">
+    <MACROPARAMETERS id="1006"/>
+    <WINDOWSTATE windowPos="710 139 600 500" active="1" windowLocked="1"/>
+    <OUTPUT name="midi output"/>
+    <OUTPUT name="out 1"/>
+    <OUTPUT name="out 2"/>
+    <INPUT name="midi input"/>
+    <INPUT name="input 1 (left)"/>
+    <INPUT name="input 2 (right)"/>
+    <MODIFIERS/>
+    <PLUGININSTANCE x="0.5532786885245902" y="0.3839285714285715">
+      <PLUGIN id="1008" type="vst" uid="86e" filename="/usr/lib/ladspa/tap_tubewarmth.so"
+              name="tap_tubewarmth" manufacturer="Tom Szilagyi" windowLocked="1"
+              enabled="1" windowX="670" windowY="230" state="8.MyLQ+XlYF4C"
+              base64:layout="95.LETVOUEU..P.BjjSPUEUSA..ADfPUME.AHPZtQVY3AP.ED......rEVduUGc.Dv.ELD..7TUTAUUTME..DP.BU0T.Df.o4FYkgG.ATP......vVX48VczAP.CTvP...">
+        <MACROPARAMETERS id="1010"/>
+        <MODIFIERASSIGNMENTS/>
+      </PLUGIN>
+    </PLUGININSTANCE>
+    <PLUGININSTANCE x="0.610655737704918" y="0.7410714285714286">
+      <PLUGIN id="1011" type="vst" uid="86e" filename="/usr/lib/ladspa/tap_tubewarmth.so"
+              name="tap_tubewarmth" manufacturer="Tom Szilagyi" windowLocked="1"
+              enabled="1" windowX="670" windowY="230" state="8.lYlC+nYl43C"
+              base64:layout="95.LETVOUEU..P.BjjSPUEUSA..ADfPUME.AHPZtQVY3AP.ED......rEVduUGc.Dv.ELD..7TUTAUUTME..DP.BU0T.Df.o4FYkgG.ATP......vVX48VczAP.CTvP...">
+        <MACROPARAMETERS id="1013"/>
+        <MODIFIERASSIGNMENTS/>
+      </PLUGIN>
+    </PLUGININSTANCE>
+    <PLUGININSTANCE x="0.2213114754098361" y="0.6767676767676768">
+      <PLUGIN id="1019" type="compressor" enabled="1" outputDb="0.0" presetDirty="1"
+              release="39.68000030517578" attack="173.4895935058594" windowX="670"
+              windowY="230" windowLocked="0" sidechainTrigger="0">
+        <MACROPARAMETERS id="1026"/>
+        <MODIFIERASSIGNMENTS/>
+      </PLUGIN>
+    </PLUGININSTANCE>
+    <CONNECTION src="0" dst="1019" srcPin="1" dstPin="1"/>
+    <CONNECTION src="0" dst="1019" srcPin="2" dstPin="2"/>
+    <CONNECTION src="1019" dst="1008" srcPin="1" dstPin="1"/>
+    <CONNECTION src="1019" dst="1011" srcPin="2" dstPin="1"/>
+    <PLUGININSTANCE x="0.8401639344262295" y="0.5876777251184834">
+      <PLUGIN id="1028" type="4bandEq" enabled="1" hiFreq="13394.9970703125"
+              presetDirty="1" hiGain="-4.333333492279053" hiQ="1.814639091491699"
+              midFreq2="8078.67919921875" midGain2="-5.833333492279053" loFreq="144.0398559570312"
+              loGain="-4.166666507720947" phaseInvert="1" windowX="670" windowY="230"
+              windowLocked="0" midFreq1="3528.63232421875" midGain1="0.8333333134651184">
+        <MACROPARAMETERS id="1033"/>
+        <MODIFIERASSIGNMENTS/>
+      </PLUGIN>
+    </PLUGININSTANCE>
+    <CONNECTION src="1008" dst="1028" srcPin="1" dstPin="1"/>
+    <CONNECTION src="1011" dst="1028" srcPin="1" dstPin="2"/>
+    <CONNECTION src="1028" dst="0" srcPin="1" dstPin="1"/>
+    <CONNECTION src="1028" dst="0" srcPin="2" dstPin="2"/>
+  </RACK>
+</PRESET>
